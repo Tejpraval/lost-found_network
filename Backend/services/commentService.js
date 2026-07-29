@@ -1,6 +1,7 @@
 import Comment from '../models/Comment.js';
 import Item from '../models/Item.js';
 import AppError from '../utils/AppError.js';
+import * as notificationService from './notificationService.js';
 
 export const createComment = async (itemId, authorId, content) => {
   const item = await Item.findById(itemId);
@@ -17,6 +18,14 @@ export const createComment = async (itemId, authorId, content) => {
     author: authorId,
     content
   });
+
+  // Notify item reporter (finder/owner)
+  await notificationService.createNotification(
+    item.reporter,
+    authorId,
+    'comment_created',
+    itemId
+  );
 
   return comment.populate('author', 'name email avatar');
 };

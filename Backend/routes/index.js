@@ -4,6 +4,7 @@ import userRoutes from './userRoutes.js';
 import itemRoutes from './itemRoutes.js';
 import claimRoutes from './claimRoutes.js';
 import commentRoutes from './commentRoutes.js';
+import notificationRoutes from './notificationRoutes.js';
 
 const router = Router();
 
@@ -23,5 +24,6 @@ router.use('/users', userRoutes);
 router.use('/items', itemRoutes);
 router.use('/claims', claimRoutes);
 router.use('/comments', commentRoutes);
+router.use('/notifications', notificationRoutes);
 
 export default router;
