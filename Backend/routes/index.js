@@ -3,6 +3,7 @@ import authRoutes from './authRoutes.js';
 import userRoutes from './userRoutes.js';
 import itemRoutes from './itemRoutes.js';
 import claimRoutes from './claimRoutes.js';
+import commentRoutes from './commentRoutes.js';
 
 const router = Router();
 
@@ -21,5 +22,6 @@ router.use('/auth', authRoutes);
 router.use('/users', userRoutes);
 router.use('/items', itemRoutes);
 router.use('/claims', claimRoutes);
+router.use('/comments', commentRoutes);
 
 export default router;
