@@ -106,7 +106,7 @@ const ItemDetails = () => {
       setShowClaimForm(false);
       fetchData();
     } catch (err) {
-      setClaimError(err.message || 'Failed to submit claim request');
+      setClaimError(err.response?.data?.message || err.message || 'Failed to submit claim request');
     } finally {
       setClaimLoading(false);
     }

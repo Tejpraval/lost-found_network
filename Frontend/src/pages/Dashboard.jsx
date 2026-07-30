@@ -130,7 +130,7 @@ const Dashboard = () => {
       // Refresh feed
       fetchItems();
     } catch (err) {
-      setCreateError(err.message || 'Error occurred while creating item listing');
+      setCreateError(err.response?.data?.message || err.message || 'Error occurred while creating item listing');
     } finally {
       setCreateLoading(false);
     }
