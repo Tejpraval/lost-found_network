@@ -1,570 +1,126 @@
-# lost-found_network
-Lost & Found Network
-Version: 1.0.0
-
-Project Type: Full Stack MERN Application
-
-Development Duration: 6 Days
-
-Team Size: 3 Members
-
-License: MIT
-
-1. Project Name
-Lost & Found Network
-Tagline
-Helping people reconnect with their lost belongings through a secure, community-driven platform.
-
-2. Project Overview
-Lost & Found Network is a full-stack MERN web application designed to simplify the process of reporting, discovering, claiming, and returning lost items.
-
-Instead of relying on WhatsApp groups, social media posts, or physical notice boards, users can register lost or found items in a centralized platform where the community can search, verify ownership, and safely coordinate item returns.
-
-The application supports authentication, role-based access, image uploads, claim requests, notifications, advanced searching, and an admin dashboard to ensure authenticity and reduce fraudulent claims.
-
-The project demonstrates production-level backend architecture, modern React frontend development, secure authentication, RESTful APIs, and scalable database design.
-
-3. Problem Statement
-Every day people lose valuable belongings such as
-
-Wallets
-
-Student ID cards
-
-Mobile phones
-
-Earphones
-
-Watches
-
-Books
-
-Laptops
-
-Chargers
-
-Keys
-
-Water bottles
-
-Calculators
-
-Bags
-
-Currently, people usually rely on
-
-WhatsApp groups
-
-Instagram stories
-
-Telegram groups
-
-Facebook posts
-
-Word of mouth
-
-Paper notices
-
-These approaches have several problems:
-
-Information gets buried quickly.
-
-No centralized repository.
-
-Difficult to search previous reports.
-
-No ownership verification.
-
-High chance of scams.
-
-No tracking of item status.
-
-No analytics.
-
-4. Proposed Solution
-Lost & Found Network provides one centralized platform where users can
-
-Register lost items.
-
-Register found items.
-
-Search existing records.
-
-Upload multiple images.
-
-Submit ownership claims.
-
-Verify item ownership.
-
-Chat through comments.
-
-Track claim progress.
-
-Receive notifications.
-
-Return items securely.
-
-The system digitizes the entire Lost & Found workflow while maintaining transparency and security.
-
-5. Objectives
-The primary objectives of the project are
-
-Reduce the time required to recover lost belongings.
-
-Provide a searchable digital repository.
-
-Prevent fraudulent ownership claims.
-
-Improve communication between finders and owners.
-
-Provide administrators with moderation tools.
-
-Build a scalable full-stack web application using modern technologies.
-
-6. Real World Scenario
-Imagine a university student loses their wallet.
-
-Current process:
-
-Ask friends
-
-↓
-
-Post on WhatsApp
-
-↓
-
-Hope someone replies
-This process is inefficient.
-
-Using Lost & Found Network:
-
-Student reports lost wallet
-
-↓
-
-Another student uploads found wallet
-
-↓
-
-System identifies possible match
-
-↓
-
-Owner submits claim
-
-↓
-
-Finder verifies ownership
-
-↓
-
-Wallet returned
-
-↓
-
-Case closed
-7. Target Users
-The platform can be used by
-
-Universities
-
-Schools
-
-Corporate Offices
-
-Apartment Communities
-
-Shopping Malls
-
-Airports
-
-Railway Stations
-
-Libraries
-
-Hostels
-
-Public Events
-
-The application is designed to be reusable across multiple organizations.
-
-8. Core Features
-Authentication
-User Registration
-
-Secure Login
-
-JWT Authentication
-
-Password Encryption
-
-Protected Routes
-
-Logout
-
-User Profile
-Users can
-
-Edit profile
-
-Upload profile picture
-
-View activity
-
-Track claims
-
-View reported items
-
-Lost Item Reporting
-Users can
-
-Enter title
-
-Description
-
-Category
-
-Date Lost
-
-Location
-
-Upload images
-
-Add identifying details
-
-Example
-
-Title
-
-Black Wallet
-
-Category
-
-Wallet
-
-Lost Date
-
-12 July
-
-Location
-
-Library
-
-Description
-
-Contains college ID and debit card.
-Found Item Reporting
-Users who find an item can create a Found Report.
-
-Information includes
-
-Images
-
-Found location
-
-Date found
-
-Description
-
-Safe pickup instructions
-
-Smart Search
-Users can search by
-
-Title
-
-Category
-
-Location
-
-Date
-
-Color
-
-Brand
-
-Status
-
-Example
-
-black wallet
-
-↓
-
-Results
-
-Wallet 1
-
-Wallet 2
-
-Wallet 3
-Filters
-Users can filter
-
-Lost
-
-Found
-
-Claimed
-
-Returned
-
-Pending
-
-Recent
-
-Oldest
-
-Category
-
-Date
-
-Image Upload
-Each report supports
-
-Multiple images
-
-Image preview
-
-Secure storage
-
-Image compression
-
-Claim Request
-If someone finds their lost item
-
-They can
-
-Open Item
-
-↓
-
-Click Claim
-
-↓
-
-Answer verification questions
-
-↓
-
-Submit Request
-Verification Process
-The finder may ask
-
-What color is the inside?
-
-Any sticker?
-
-What's inside the bag?
-
-Serial Number?
-
-Brand?
-
-Last location?
-Only correct answers approve the claim.
-
-Notifications
-Users receive notifications when
-
-Claim accepted
-
-Claim rejected
-
-New comment
-
-Item returned
-
-Admin message
-
-Comments
-Each listing supports discussion.
-
-Example
-
-"I found something similar."
-
-"Please check your DM."
-
-"I can meet tomorrow."
-Bookmark
-Users can save listings.
-
-Admin Dashboard
-Admin can
-
-Delete fake reports
-
-Suspend users
-
-Approve reports
-
-Reject spam
-
-View analytics
-
-Manage categories
-
-9. Functional Requirements
-The system shall allow users to
-
-Register
-
-Login
-
-Report lost items
-
-Report found items
-
-Search listings
-
-Upload images
-
-Submit claims
-
-Receive notifications
-
-Track report status
-
-Edit reports
-
-Delete reports
-
-10. Non Functional Requirements
-The system should
-
-Be secure
-
-Be responsive
-
-Be scalable
-
-Handle concurrent users
-
-Protect user data
-
-Load pages efficiently
-
-Validate user input
-
-Prevent unauthorized access
-
-Support mobile devices
-
-11. User Roles
-Guest
-Can
-
-Browse public listings
-
-Search items
-
-Register
-
-Cannot
-
-Report items
-
-Claim items
-
-Comment
-
-User
-Can
-
-Report lost items
-
-Report found items
-
-Upload images
-
-Claim items
-
-Comment
-
-Edit own reports
-
-Admin
-Can
-
-Manage users
-
-Moderate reports
-
-Delete fake listings
-
-View statistics
-
-Manage categories
-
-Suspend malicious users
-
-12. Project Goals
-The project demonstrates
-
-✅ MERN Stack
-
-✅ JWT Authentication
-
-✅ REST APIs
-
-✅ MongoDB Relationships
-
-✅ File Upload
-
-✅ Role Based Access
-
-✅ Search
-
-✅ Filtering
-
-✅ Dashboard
-
-✅ Responsive UI
-
-✅ Clean Folder Structure
-
-13. Expected Outcome
-The platform should
-
-Reduce recovery time.
-
-Increase successful returns.
-
-Improve trust.
-
-Organize lost item records.
-
-Eliminate duplicate posts.
-
-Provide transparency.
-
-Offer better user experience than social media.
-
-14. Why This Project?
-This project was chosen because it solves a real-world problem faced by educational institutions, workplaces, residential communities, and public spaces. Unlike simple CRUD applications, it introduces practical workflows such as ownership verification, claim management, role-based access control, image handling, and moderation.
-
-From a technical perspective, it demonstrates:
-
-Full-stack MERN development
-
-Authentication and authorization using JWT
-
-Secure password hashing with bcrypt
-
-File uploads and media management
-
-RESTful API design
-
-MongoDB schema modeling
-
-Responsive React UI
-
-Clean project architecture
-
-Collaborative Git workflow
-
-Production deployment
-
-It is both a meaningful software solution and a strong portfolio project that reflects real-world engineering practices.
+# 🔍 Retracer — Lost & Found Network
+
+[![MERN Stack](https://img.shields.io/badge/Stack-MERN-blue.svg)](https://mongodb.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Version](https://img.shields.io/badge/Version-1.0.0-green.svg)](#)
+
+> Helping communities reconnect with their lost belongings through a secure, claims-verified, and collaborative digital repository.
+
+---
+
+## 📌 Project Overview
+**Retracer** is a production-grade full-stack MERN (MongoDB, Express, React, Node.js) web application designed to digitize and secure the lost-and-found workflow. 
+
+Instead of relying on scattered social media posts or physical notice boards where information quickly gets lost, Retracer provides a centralized, searchable repository. Features include JWT authentication, role-based access controls, multiple image uploads, threaded discussions, claim request notifications, and custom ownership-verification questionnaires to prevent fraudulent claims.
+
+---
+
+## 🛠️ Technology Stack
+
+| Component | Technology | Description |
+| :--- | :--- | :--- |
+| **Frontend** | React 19, Vite, Tailwind CSS v4 | Responsive, SPA with state-driven layouts. |
+| **Backend** | Node.js, Express.js (MVC Pattern) | RESTful API gateway with token-based session handling. |
+| **Database** | MongoDB, Mongoose | Document-oriented schemas with validation rules. |
+| **Storage** | Cloudinary CDN, Multer | Buffered multi-image parsing and secure image hosting. |
+| **Security** | JSON Web Tokens (JWT), bcryptjs | Stateless session encryption and password hashing. |
+
+---
+
+## ⚙️ Core Architecture & Features
+
+```mermaid
+graph TD
+    A[Guest Visitor] -->|Browse & Search Feed| B(Feed Board)
+    C[Authenticated User] -->|Report Item| D(Multipart Form Upload)
+    D -->|Buffer Streams| E[Cloudinary CDN]
+    C -->|Submit Claim| F(Ownership Q&A Form)
+    F -->|Notify Finder| G[Notifications System]
+    G -->|Approve/Reject| H[Claim Verification Cascade]
+```
+
+### 🗝️ Key Features
+*   **Authentication & Access**: JWT-based session tokens with custom `ProtectedRoute` route guards.
+*   **Multipart Image Uploads**: Local buffer parsing via Multer streams straight to Cloudinary.
+*   **Fraud Prevention & Q&A Claims**: Finders write unique questions (e.g. *What sticker is on the lid?*). Claimants must answer these questions to submit recovery requests.
+*   **Chronological Discussion Boards**: Threaded public comments on listings to coordinate physical handovers safely.
+*   **Live Notification Bell**: Auto-polling header dropdown indicating unread comments, claim entries, and claim approvals.
+*   **Robust Filter & Search Controls**: Search matches by keyword, item type (`lost`/`found`), category, location, and date range.
+
+---
+
+## 📁 Repository Structure
+```text
+lost-found_network/
+├── Backend/                # Express API Server
+│   ├── config/             # Database connection setups
+│   ├── controllers/        # Route controllers
+│   ├── middlewares/        # Auth, upload, and error middleware
+│   ├── models/             # Mongoose schemas
+│   ├── routes/             # API endpoints
+│   ├── services/           # Cloudinary & claims business logic
+│   └── utils/              # Custom logger wrappers
+└── Frontend/               # React Vite Client
+    ├── public/             # Static SVGs and assets
+    └── src/
+        ├── components/     # Global layout components (Navbar, Route Guards)
+        ├── context/        # Global Auth Context Provider
+        ├── pages/          # Layout views (Home, Login, Dashboard, Details)
+        └── utils/          # Axios configurations
+```
+
+---
+
+## 🚀 Local Development Setup
+
+### Prerequisites
+*   [Node.js](https://nodejs.org/) (v18+ recommended)
+*   [MongoDB Atlas](https://www.mongodb.com/atlas) Cluster
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/Tejpraval/lost-found_network.git
+cd lost-found_network
+```
+
+### 2. Configure the Backend
+1. Navigate to the Backend folder:
+   ```bash
+   cd Backend
+   npm install
+   ```
+2. Create a `.env` file in the `Backend/` folder and paste the following parameters:
+   ```env
+   PORT=5000
+   NODE_ENV=development
+   MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/lost-found-network
+   JWT_SECRET=your_long_secure_jwt_secret_key
+   JWT_EXPIRES_IN=7d
+   CLIENT_URL=http://localhost:5173
+
+   # Cloudinary Credentials (For Image Uploads)
+   CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
+   CLOUDINARY_API_KEY=your_cloudinary_api_key
+   CLOUDINARY_API_SECRET=your_cloudinary_api_secret
+   ```
+3. Run the Backend:
+   ```bash
+   npm run dev
+   ```
+
+### 3. Configure the Frontend
+1. Open a new terminal and navigate to the Frontend folder:
+   ```bash
+   cd ../Frontend
+   npm install
+   ```
+2. Run the Frontend:
+   ```bash
+   npm run dev
+   ```
+3. Open your browser and explore the platform at `http://localhost:5173/`.
+
+---
+
+## 📄 License
+Distributed under the MIT License. See `LICENSE` for more information.
