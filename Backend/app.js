@@ -14,8 +14,13 @@ const app = express();
 
 // Middlewares
 app.use(helmet());
+
+const clientUrl = process.env.CLIENT_URL
+  ? process.env.CLIENT_URL.replace(/\/$/, '')
+  : '*';
+
 app.use(cors({
-  origin: process.env.CLIENT_URL || '*',
+  origin: clientUrl,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
