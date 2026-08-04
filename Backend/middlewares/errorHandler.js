@@ -1,6 +1,19 @@
 import logger from '../utils/logger.js';
 
 const errorHandler = (err, req, res, next) => {
+  // Format Multer errors to be clean 400 Operational errors
+  if (err.name === 'MulterError') {
+    err.statusCode = 400;
+    err.isOperational = true;
+    if (err.code === 'LIMIT_FILE_SIZE') {
+      err.message = 'One or more files are too large. Maximum size allowed is 10MB per file.';
+    } else if (err.code === 'LIMIT_FILE_COUNT') {
+      err.message = 'You can upload a maximum of 5 files.';
+    } else {
+      err.message = `File upload error: ${err.message}`;
+    }
+  }
+
   err.statusCode = err.statusCode || 500;
   err.status = err.status || 'error';
 
